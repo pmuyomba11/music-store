@@ -69,7 +69,7 @@ app.put("/songs/:id", (req, res) => {
       {
         new: true,
       },
-      (error, updatedBook) => {
+      (error, updatedSong) => {
         res.redirect(`/songs/${req.params.id}`)
       }
     )
