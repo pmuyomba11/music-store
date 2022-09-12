@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <h1>Songs index page</h1>
+    <ul>
+        <% songs.forEach(song=> { %>
+            <li>
+                <%=song.title; %>
+                    <form action="/songs/<%= song.id %>?_method=DELETE" method="POST">
+                        <input type="submit" value="DELETE" />
+                        <a href="/songs/<%=songs._id %>/edit">Edit</a>
+                    </form>
+                    <% }) %>
+
+            </li>
+
+
+            <a href="/songs/<%=songs._id; %>">
+                <%=songs.title; %>
+            </a>
+
+
+
+    </ul>
+
+    <nav>
+        <a href="/songs/new">Add New Song</a>
+    </nav>
+</body>
+
+</html>
