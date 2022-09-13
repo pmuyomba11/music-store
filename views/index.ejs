@@ -3,18 +3,76 @@
 
 <head>
     <meta charset="utf-8" />
-    <title></title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+        h1 {
+
+            text-align: center;
+            color: white;
+            font-family: 'Aboreto', cursive;
+        }
+
+        body {
+
+background: radial-gradient(circle, rgba(42, 133, 133, 1) 0%, rgba(25, 40, 59, 1) 80%);
+background-repeat: inherit;
+
+
+}
+
+        ul,
+        li,
+        a {
+            align-items: center;
+            color: WHITE;
+            display: flex;
+            flex-direction: column-reverse;
+            margin-top: 20px;
+            font-family: cursive;
+            font-weight: lighter;
+            font-family: 'Aboreto', cursive;
+        }
+
+        input {
+            border-radius: 50px;
+
+        }
+
+        .delete {
+        background: linear-gradient(0deg, rgba(226,236,230,1) 0%, rgba(25,40,59,1) 80%);
+        color:azure;
+        padding: 10px;
+       
+        }
+
+        .link {
+            text-align: center;
+            color: aqua;
+            justify-content: center;
+            margin-top: 150px;
+        }
+        
+    </style>
 </head>
 
 <body>
-    <h1>Songs index page</h1>
+
+
+    <h1>SONGS + Artists</h1>
+
     <ul>
         <% songs.forEach(song=> { %>
             <li>
                 <%=song.title; %>
                     <form action="/songs/<%= song.id %>?_method=DELETE" method="POST">
-                        <input type="submit" value="DELETE" />
-                        <a href="/songs/<%=song._id %>/edit">Edit</a>
+
+                        <input class="delete" type="submit" value="DELETE" />
+                        <a href="/songs/<%=song._id %>/edit">
+                            <ion-icon name="create-outline"></ion-icon>
+                        </a>
+
                     </form>
                     <% }) %>
 
@@ -30,8 +88,10 @@
     </ul>
 
     <nav>
-        <a href="/songs/new">Add New Song</a>
+        <a class="link" href="/songs/new">Add New Song</a>
     </nav>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
