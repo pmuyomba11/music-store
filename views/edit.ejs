@@ -7,9 +7,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Book List</title>
 </head>
+<style>
+  	@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+		body {
+			background: radial-gradient(circle, rgba(42, 133, 133, 1) 0%, rgba(25, 40, 59, 1) 80%);
+			background-repeat: inherit;
+			
+		}
+		h1 {
+			color: whitesmoke;
+			margin-left: 40px;
+		
+		}
 
+		form {
+			display: grid;
+			justify-content: center;
+			font-weight: lighter;
+			font-family: 'Aboreto', cursive;
+			color: whitesmoke;
+			margin-top: 150px;
+
+		}
+
+		input {
+			border-radius: 40px;
+			padding: 10px;
+		}
+
+		div {
+			box-sizing: border-box;
+            margin: 10px;
+            border-radius: 30px;         
+            background: linear-gradient(0deg, rgba(226,236,230,1) 0%, rgba(1,2,11,1) 44%);
+
+         
+		}
+</style>
 <body>
+  <div>
   <h1>Edit Song</h1>
+  </div>
 
   <form action="/songs/<%=song._id%>?_method=PUT" method="POST">
 

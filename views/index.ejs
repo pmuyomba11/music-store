@@ -15,12 +15,11 @@
         }
 
         body {
+            background: radial-gradient(circle, rgba(42, 133, 133, 1) 0%, rgba(25, 40, 59, 1) 80%);
+            background-repeat: inherit;
 
-background: radial-gradient(circle, rgba(42, 133, 133, 1) 0%, rgba(25, 40, 59, 1) 80%);
-background-repeat: inherit;
 
-
-}
+        }
 
         ul,
         li,
@@ -41,10 +40,10 @@ background-repeat: inherit;
         }
 
         .delete {
-            background: linear-gradient(0deg, rgba(226,236,230,1) 0%, rgba(1,2,11,1) 44%);
-        color:azure;
-        padding: 10px;
-       
+            background: linear-gradient(0deg, rgba(226, 236, 230, 1) 0%, rgba(1, 2, 11, 1) 44%);
+            color: azure;
+            padding: 10px;
+
         }
 
         .link {
@@ -53,22 +52,22 @@ background-repeat: inherit;
             justify-content: center;
             margin-top: 150px;
         }
+
         div {
             box-sizing: border-box;
             margin: 10px;
-            border-radius: 30px;         
-            background: linear-gradient(0deg, rgba(226,236,230,1) 0%, rgba(1,2,11,1) 44%);
-         
-          
+            border-radius: 30px;
+            background: linear-gradient(0deg, rgba(226, 236, 230, 1) 0%, rgba(1, 2, 11, 1) 44%);
+
+
         }
-        
     </style>
 </head>
 
 <body>
-<div>
-<h1>SONGS + Artists UPDATER</h1>
-</div>
+    <div>
+        <h1>SONGS + Artists UPDATER</h1>
+    </div>
 
     <ul>
         <% songs.forEach(song=> { %>
