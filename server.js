@@ -107,6 +107,7 @@ app.get('/songs/:id', (req, res) => {
 	Song.findById(req.params.id, (err, foundSong) => {
 		res.render('show.ejs', {
 			song: foundSong,
+		
 		});
 	});
 });
